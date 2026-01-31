@@ -1,4 +1,4 @@
-import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedSection } from "../components/AnimatedSection";
 import { CheckCircle2, Factory, Map, History } from "lucide-react";
 
 export default function About() {
@@ -8,9 +8,12 @@ export default function About() {
       <div className="bg-primary text-white py-24 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-20 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">ABOUT INDUSMIN</h1>
+          <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">ABOUT STONEX</h1>
           <p className="text-xl text-gray-400 max-w-3xl leading-relaxed">
-            Founded in 2011 with a vision to revolutionize the industrial minerals supply chain through rigorous quality control and transparent ethics.
+            Rajasthan-based Stonex Enterprises is a leading manufacturer of premium mineral fillers and extenders, including Quartz, Calcite, Dolomite, and Talc.
+<br />
+<br />
+We specialize in high-purity powders and stearic acid-coated minerals designed for superior performance in the paint, plastic, rubber, glass, and fertilizer industries.
           </p>
         </div>
       </div>
@@ -25,19 +28,19 @@ export default function About() {
             <h2 className="text-4xl font-display font-bold text-primary mb-6">Decade of Excellence</h2>
             <div className="space-y-6 text-gray-600 text-lg">
               <p>
-                IndusMin began as a small processing unit in Rajasthan's mineral belt. Recognizing the gap between raw mine output and industrial requirements, we invested heavily in advanced grinding and beneficiation technology.
+                Our Company Stonex Enterprises was founded by RAJESH DOOT in 2011, over 15 years of experience in various industrial minerals as well as expertise in mineral grinding and maintaining high quality standard of product. We operate multiple factories across Rajasthan.
               </p>
               <p>
-                Today, we operate three dedicated processing plants with a combined capacity of 50,000 MT per annum, serving clients across Europe, Southeast Asia, and the Middle East.
+                For achieving High Quality Standard we operate advance production unit with Ball Mills, Raymond Mills, Micronizer, 28 Roller with Classifier Machine, Multi Grain Shorting Machine, Gitti Shorting Machine and Automatic powder Coating machines. Our success can be largely credited to our skilled, disciplined & motivated employees, who continuously & collectively strive to deliver the best. Today we have a production capacity of __________MT per month. 
               </p>
             </div>
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-accent translate-x-4 translate-y-4 -z-10" />
             <img 
-              src="https://pixabay.com/get/gf44826e978b233769ee1ebd19e87cc948a9c5bd40778a652135cedbcf57c0676aa6365aaca9c92904d701ce16dbd1ac333338eab1aa5ccc9e0477fa93661917f_1280.jpg" 
+              src="https://thumbs.dreamstime.com/b/indian-businessman-24524949.jpg" 
               alt="Factory exterior" 
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-full h-auto  hover:grayscale-0 transition-all duration-700"
             />
           </div>
         </AnimatedSection>

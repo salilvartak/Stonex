@@ -8,15 +8,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-accent flex items-center justify-center font-display font-bold text-2xl text-primary">
-                I
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-lg leading-none tracking-wider text-white">INDUS<span className="text-accent">MIN</span></span>
-                <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em] leading-none mt-1">Minerals & Chemicals</span>
-              </div>
+            <Link href="/" className="flex-shrink-0 flex items-center gap-2 group">
+            <div className="h-10 ">
+              <img src="https://i.ibb.co/Kz0TRmTG/logo.png" alt="Logo" className=" h-8" />
             </div>
+            <div className="flex flex-col">
+              <span className="font-display font-bold text-lg leading-none tracking-wider text-white">STONE<span className="text-accent">X</span></span>
+              <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em] leading-none mt-1">Minerals & Chemicals</span>
+            </div>
+          </Link>
             <p className="text-sm leading-relaxed text-gray-400">
               India’s premier manufacturer and exporter of high-grade industrial minerals. Serving ceramics, glass, paint, and cosmetic industries worldwide since 2011.
             </p>

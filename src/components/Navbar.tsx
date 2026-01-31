@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "../lib/utils";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,7 @@ export function Navbar() {
     { href: "/", label: "Home" },
     { href: "/products", label: "Products" },
     { href: "/about", label: "About Us" },
+    { href: "/infrastructure", label: "Infrastructure" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -20,11 +21,11 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-accent flex items-center justify-center font-display font-bold text-2xl text-primary group-hover:bg-white transition-colors">
-              I
+            <div className="h-8 ">
+              <img src="https://i.ibb.co/Kz0TRmTG/logo.png" alt="Logo" className=" h-8" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg leading-none tracking-wider text-white">INDUS<span className="text-accent">MIN</span></span>
+              <span className="font-display font-bold text-lg leading-none tracking-wider text-white">STONE<span className="text-accent">X</span></span>
               <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em] leading-none mt-1">Minerals & Chemicals</span>
             </div>
           </Link>
