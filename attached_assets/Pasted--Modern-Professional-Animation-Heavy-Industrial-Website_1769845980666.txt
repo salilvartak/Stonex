@@ -1,0 +1,279 @@
+
+
+**(Modern, Professional, Animation-Heavy Industrial Website)**
+
+---
+
+### PROJECT OVERVIEW
+
+Build a **modern, professional, animation-heavy corporate website** for an industrial minerals manufacturing company.
+
+**Company Name:** Stonex Enterprises
+**Industry:** Industrial Minerals – Fillers & Extenders
+**Accent Color:** **#FFE600** (use only for highlights, CTAs, icons, hover states)
+**Primary Colors:** Charcoal black, slate gray, off-white
+**Tone:** Large-scale, trustworthy, export-ready manufacturer
+**Style:** Clean, industrial, premium, confident
+
+Animations should be **smooth, subtle, and purposeful**—no playful or gimmicky motion.
+
+---
+
+## SITE STRUCTURE (ONLY THESE PAGES)
+
+1. **Home**
+2. **About Us**
+3. **Products**
+
+   * Individual sub-page for each product
+4. **Contact Us**
+
+---
+
+## 1. HOME PAGE
+
+### HERO SECTION
+
+* Full-width hero with industrial mineral / manufacturing visuals
+* Headline:
+  **“India’s Leading Manufacturer of Premium Industrial Minerals”**
+* Subheadline:
+  Manufacturer & Supplier of Calcite, Dolomite, Quartz, Talc & Coated Mineral Powders
+* Primary CTA: **View Products**
+* Secondary CTA: **Contact Us**
+* Subtle parallax background + text reveal animation
+
+---
+
+### PRODUCTS SECTION (Preview Grid)
+
+* Animated product cards (hover + cursor interaction)
+* Each card links to its dedicated product sub-page
+
+Products to display:
+
+* Calcite Powder
+* Dolomite Powder
+* Quartz Powder
+* Quartz Grits
+* Talc / Soapstone Powder
+* Coated Calcite Powder
+* Coated Dolomite Powder
+
+---
+
+### INDUSTRIES WE SERVE
+
+Animated icon / card layout for:
+
+* Paints & Coatings
+* Plastics & Polymers
+* Rubber
+* Paper
+* Glass & Ceramics
+* Construction
+* Agriculture & Fertilizers
+* Pharmaceuticals
+* Electronics & Foundry
+* Countertops & Slabs
+
+Each industry card:
+
+* Minimal description
+* Hover animation
+* Clean visual hierarchy
+
+---
+
+### WHY CHOOSE US
+
+Use animated feature blocks or counters.
+
+Include:
+
+* Established in 2011
+* Advanced Manufacturing Technology
+* Multiple Plants & Mines
+* Custom Micron & Mesh Sizes
+* Consistent Quality Assurance
+* Competitive Pricing
+* Timely Delivery
+* Sustainability Commitment
+
+---
+
+## 2. ABOUT US PAGE
+
+### COMPANY INTRODUCTION
+
+**Stonex Enterprises** is a leading manufacturer and supplier of premium industrial minerals based in Rajasthan, India.
+
+Founded in **2011 by Rajesh Doot**, the company brings over **15 years of experience** in industrial mineral processing and high-quality grinding solutions.
+
+---
+
+### MANUFACTURING & INFRASTRUCTURE
+
+Include animated sections highlighting:
+
+* Ball Mills
+* Raymond Mills
+* Micronizers
+* Roller Classifier Machines
+* Automatic Powder Coating Units
+
+---
+
+### FOOTPRINT
+
+Visual grid or map-style layout showing:
+
+* Mines across Rajasthan
+* Multiple manufacturing plants
+* Warehouse in Nashik, Maharashtra
+
+---
+
+## 3. PRODUCTS PAGE (MAIN LISTING)
+
+* Clean grid listing all products
+* Each product links to a **dedicated sub-page**
+* Hover animations and smooth page transitions
+
+---
+
+## 4. PRODUCT SUB-PAGES (VERY IMPORTANT)
+
+### EACH PRODUCT MUST HAVE ITS OWN PAGE
+
+Use the following structure for **every product page**:
+
+---
+
+### PRODUCT HERO
+
+* Product image
+* Product name
+* Purity level (where applicable)
+
+---
+
+### WHAT IS [PRODUCT NAME]
+
+Include:
+
+* Technical description
+* Chemical formula
+* Core mineral characteristics
+* Performance advantages
+
+---
+
+### KEY FEATURES & BENEFITS
+
+Bullet points covering:
+
+* Mechanical properties
+* Chemical stability
+* Cost efficiency
+* Industry performance benefits
+
+---
+
+### PHYSICAL & CHEMICAL PROPERTIES TABLE
+
+Create a clean, professional table with placeholders for:
+
+* Brightness
+* Whiteness
+* Moisture Content
+* Specific Gravity
+* pH Value
+* Bulk Density
+* Oil Absorption
+* Chemical composition (CaCO₃, MgCO₃, SiO₂, Fe₂O₃, etc.)
+
+---
+
+### PARTICLE SIZE AVAILABILITY
+
+* Ultra Fine
+* Super Fine
+* Fine
+* Custom Micron & Mesh Sizes (on request)
+
+---
+
+### PACKAGING OPTIONS
+
+* 25 Kg Bags
+* 50 Kg Bags
+* 1 Tonne Jumbo PP Bags
+
+---
+
+### APPLICATIONS
+
+Animated industry cards relevant to that product, such as:
+
+* Paints & Coatings
+* Plastics & Polymers
+* Rubber
+* Paper
+* Glass
+* Ceramics
+* Construction
+* Agriculture
+* Pharmaceuticals
+* Electronics
+
+---
+
+### PRODUCTS THAT REQUIRE SUB-PAGES
+
+1. Calcite Powder (Calcium Carbonate – CaCO₃)
+2. Dolomite Powder (CaMg(CO₃)₂)
+3. Quartz Powder (>99% SiO₂)
+4. Quartz Grits (Multiple Grades & Sizes)
+5. Talc / Soapstone Powder
+6. Coated Calcite Powder (Stearic Acid Coated)
+7. Coated Dolomite Powder (Stearic Acid Coated)
+
+---
+
+## 5. CONTACT US PAGE
+
+Include:
+
+* Company address
+* Phone number
+* Email
+* Google Map embed (live location)
+* Clean contact form
+* CTA section: **“Partner With Stonex Enterprises”**
+
+---
+
+## UX, PERFORMANCE & TECH REQUIREMENTS
+
+* Fully responsive (desktop-first)
+* Smooth scroll-based animations
+* Sticky header with page transitions
+* SEO-friendly structure
+* Fast loading
+* Accessible contrast
+* Professional micro-interactions
+* Footer with quick links & contact info
+
+---
+
+## FINAL EXECUTION GOAL
+
+The website must:
+
+* Feel like a **large-scale industrial manufacturer**
+* Be **modern, animation-rich, but enterprise-safe**
+* Use **#FFE600 only as an accent**
+* Instill confidence, credibility, and scale
+
+
