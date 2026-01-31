@@ -1,18 +1,43 @@
-import { sql } from "drizzle-orm";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, timestamp, jsonb } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  username: text("username").notNull().unique(),
-  password: text("password").notNull(),
+// === TABLE DEFINITIONS ===
+export const products = pgTable("products", {
+  id: serial("id").primaryKey(),
+  slug: text("slug").notNull().unique(),
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  heroImage: text("hero_image").notNull(),
+  // Storing complex structured data as JSONB for flexibility
+  specifications: jsonb("specifications").$type<{
+    purity?: string;
+    chemicalFormula?: string;
+    characteristics?: string[];
+    features?: string[];
+    properties?: Record<string, string>; // e.g., Brightness: "98%"
+    particleSizes?: string[];
+    packaging?: string[];
+    applications?: string[];
+  }>().notNull(),
 });
 
-export const insertUserSchema = createInsertSchema(users).pick({
-  username: true,
-  password: true,
+export const inquiries = pgTable("inquiries", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone"),
+  message: text("message").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
 });
 
-export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
+// === SCHEMAS ===
+export const insertProductSchema = createInsertSchema(products).omit({ id: true });
+export const insertInquirySchema = createInsertSchema(inquiries).omit({ id: true, createdAt: true });
+
+// === EXPLICIT API TYPES ===
+export type Product = typeof products.$inferSelect;
+export type InsertInquiry = z.infer<typeof insertInquirySchema>;
+
+export type CreateInquiryRequest = InsertInquiry;
+export type InquiryResponse = typeof inquiries.$inferSelect;
