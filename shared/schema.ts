@@ -15,7 +15,11 @@ export const products = pgTable("products", {
     chemicalFormula?: string;
     characteristics?: string[];
     features?: string[];
-    properties?: Record<string, string>; // e.g., Brightness: "98%"
+    howWeSource?: string;
+    properties?: {
+      chemical?: Record<string, string>;
+      physical?: Record<string, string>;
+    };
     particleSizes?: string[];
     packaging?: string[];
     applications?: string[];

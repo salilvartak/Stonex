@@ -1,6 +1,6 @@
 import { useProduct } from "@/hooks/use-products";
 import { Link, useRoute } from "wouter";
-import { Loader2, ArrowLeft, Download, Check } from "lucide-react";
+import { Loader2, ArrowLeft, Download, Check, Microscope, Database, Box, Factory } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import NotFound from "./not-found";
 
@@ -82,37 +82,108 @@ export default function ProductDetail() {
               </div>
             </AnimatedSection>
 
-            {/* Properties Table */}
-            <AnimatedSection delay={0.2}>
-              <h2 className="text-3xl font-display font-bold text-primary mb-6">Technical Specifications</h2>
-              <div className="overflow-hidden border border-gray-200">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Property</th>
-                      <th className="px-6 py-4 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">Value</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {Object.entries(product!.specifications.properties || {}).map(([key, value], i) => (
-                      <tr key={key} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
-                        <td className="px-6 py-4 text-sm font-medium text-gray-900 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</td>
-                        <td className="px-6 py-4 text-sm text-gray-500 font-mono">{String(value)}</td>
+            <AnimatedSection delay={0.1}>
+              <h2 className="text-3xl font-display font-bold text-primary mb-6 text-stroke">How We Source It</h2>
+              <p className="text-gray-600 text-lg leading-relaxed border-l-4 border-accent pl-6">
+                {product!.specifications.howWeSource || "Our minerals are extracted through sustainable mining practices across our captive mines in Rajasthan, ensuring the highest purity from the source."}
+              </p>
+            </AnimatedSection>
+
+            {/* Tech Specs Tables */}
+            <AnimatedSection delay={0.2} className="space-y-12">
+              <h2 className="text-4xl font-display font-bold text-primary border-b-2 border-accent inline-block pb-2">Technical Specifications</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Chemical Properties */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-primary flex items-center gap-2">
+                    <Microscope className="w-5 h-5 text-accent" /> Chemical Properties
+                  </h3>
+                  <div className="overflow-hidden border border-gray-200 rounded-sm">
+                    <table className="min-w-full divide-y divide-gray-200">
+                      <thead className="bg-zinc-900 text-white">
+                        <tr>
+                          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Component</th>
+                          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Value</th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        {Object.entries(product!.specifications.properties?.chemical || {}).map(([key, value], i) => (
+                          <tr key={key} className={i % 2 === 0 ? "bg-white" : "bg-zinc-50"}>
+                            <td className="px-4 py-3 text-sm font-bold text-gray-900">{key}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600 font-mono">{String(value)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                {/* Physical Properties */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-primary flex items-center gap-2">
+                    <Database className="w-5 h-5 text-accent" /> Physical Properties
+                  </h3>
+                  <div className="overflow-hidden border border-gray-200 rounded-sm">
+                    <table className="min-w-full divide-y divide-gray-200">
+                      <thead className="bg-zinc-900 text-white">
+                        <tr>
+                          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Property</th>
+                          <th className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider">Value</th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        {Object.entries(product!.specifications.properties?.physical || {}).map(([key, value], i) => (
+                          <tr key={key} className={i % 2 === 0 ? "bg-white" : "bg-zinc-50"}>
+                            <td className="px-4 py-3 text-sm font-bold text-gray-900">{key}</td>
+                            <td className="px-4 py-3 text-sm text-gray-600 font-mono">{String(value)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              {/* Particle Size Table */}
+              <div className="space-y-4 mt-12">
+                <h3 className="text-xl font-bold text-primary flex items-center gap-2 uppercase tracking-wider">
+                  <Box className="w-5 h-5 text-accent" /> Particle Size Availability
+                </h3>
+                <div className="overflow-hidden border border-gray-200 rounded-sm">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-accent text-primary">
+                      <tr>
+                        <th className="px-6 py-4 text-left text-xs font-black uppercase tracking-widest">Available Grades</th>
+                        <th className="px-6 py-4 text-left text-xs font-black uppercase tracking-widest">Description</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      {product!.specifications.particleSizes?.map((size, i) => (
+                        <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                          <td className="px-6 py-4 text-sm font-bold text-gray-900">{size}</td>
+                          <td className="px-6 py-4 text-sm text-gray-500 italic">Available on request for various mesh sizes</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </AnimatedSection>
 
-            {/* Applications */}
+            {/* Industry Applications Grid */}
             <AnimatedSection delay={0.3}>
-              <h2 className="text-3xl font-display font-bold text-primary mb-6">Applications</h2>
-              <div className="flex flex-wrap gap-3">
+              <h2 className="text-3xl font-display font-bold text-primary mb-8 uppercase tracking-tighter">Industry Applications</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {product!.specifications.applications?.map((app, i) => (
-                  <span key={i} className="px-4 py-2 bg-primary text-white text-sm font-bold uppercase tracking-wide">
-                    {app}
-                  </span>
+                  <div key={i} className="group p-6 bg-zinc-50 border border-gray-200 hover:border-accent hover:bg-white transition-all duration-300 flex flex-col items-center text-center justify-center">
+                    <div className="w-10 h-10 mb-3 bg-white group-hover:bg-accent flex items-center justify-center transition-colors">
+                      <Factory className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-widest text-primary">
+                      {app}
+                    </span>
+                  </div>
                 ))}
               </div>
             </AnimatedSection>

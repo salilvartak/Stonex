@@ -13,6 +13,7 @@ const SEED_DATA = [
     specifications: {
       purity: "High Purity CaCO₃",
       chemicalFormula: "CaCO₃",
+      howWeSource: "Sourced from our captive high-grade limestone mines in Rajasthan through systematic open-cast mining.",
       characteristics: ["High Whiteness", "Low Oil Absorption", "High Dispersibility"],
       features: [
         "Excellent chemical purity",
@@ -21,13 +22,20 @@ const SEED_DATA = [
         "Low moisture content"
       ],
       properties: {
-        "Brightness": "96% - 99%",
-        "Whiteness": "97% Min",
-        "Moisture": "< 0.2%",
-        "Specific Gravity": "2.7",
-        "pH Value": "9 - 9.5",
-        "Bulk Density": "0.6 - 0.9 gm/cc",
-        "Oil Absorption": "18 - 22 ml/100gm"
+        chemical: {
+          "CaCO₃": "98.5%",
+          "MgCO₃": "0.5%",
+          "SiO₂": "0.2%",
+          "Fe₂O₃": "0.02%"
+        },
+        physical: {
+          "Brightness": "98%",
+          "Whiteness": "97% Min",
+          "Moisture": "< 0.2%",
+          "Specific Gravity": "2.7",
+          "pH Value": "9 - 9.5",
+          "Oil Absorption": "18 - 22 ml/100gm"
+        }
       },
       particleSizes: ["Ultra Fine", "Super Fine", "Fine", "Custom Mesh Sizes"],
       packaging: ["25 Kg Bags", "50 Kg Bags", "1 Tonne Jumbo Bags"],
@@ -41,6 +49,7 @@ const SEED_DATA = [
     description: "Premium double carbonate of Calcium and Magnesium (CaMg(CO₃)₂). Offers excellent weather resistance and mechanical properties.",
     specifications: {
       chemicalFormula: "CaMg(CO₃)₂",
+      howWeSource: "Mined from specialized dolomite deposits ensuring optimal calcium-magnesium ratio.",
       characteristics: ["High Hardness", "Weather Resistance", "High Bulk Density"],
       features: [
         "High degree of whiteness",
@@ -49,12 +58,20 @@ const SEED_DATA = [
         "Cost-effective filler"
       ],
       properties: {
-        "Brightness": "90% - 95%",
-        "Whiteness": "92% Min",
-        "Moisture": "< 0.2%",
-        "Specific Gravity": "2.85",
-        "pH Value": "9.5 - 10",
-        "Hardness": "3.5 - 4 Mohs"
+        chemical: {
+          "CaO": "31%",
+          "MgO": "21%",
+          "SiO₂": "0.5%",
+          "CO₂": "46%"
+        },
+        physical: {
+          "Brightness": "92%",
+          "Whiteness": "92% Min",
+          "Moisture": "< 0.2%",
+          "Specific Gravity": "2.85",
+          "pH Value": "9.5 - 10",
+          "Hardness": "3.5 - 4 Mohs"
+        }
       },
       particleSizes: ["300 Mesh to 700 Mesh", "Custom Micron Sizes"],
       packaging: ["50 Kg HDPE Bags", "Jumbo Bags"],
@@ -69,6 +86,7 @@ const SEED_DATA = [
     specifications: {
       purity: ">99% SiO₂",
       chemicalFormula: "SiO₂",
+      howWeSource: "Processed from high-grade quartz lumps sourced from our exclusive mining sites in Rajasthan.",
       characteristics: ["High Hardness", "Chemical Inertness", "Electrical Insulation"],
       features: [
         "High silica content",
@@ -77,14 +95,22 @@ const SEED_DATA = [
         "Abrasion resistance"
       ],
       properties: {
-        "Silica (SiO₂)": "99.5% Min",
-        "Whiteness": "95% Min",
-        "Moisture": "< 0.1%",
-        "Specific Gravity": "2.65",
-        "Hardness": "7 Mohs",
-        "Melting Point": "1700°C"
+        chemical: {
+          "SiO₂": "99.5% Min",
+          "Al₂O₃": "0.15%",
+          "Fe₂O₃": "0.02%",
+          "TiO₂": "0.01%"
+        },
+        physical: {
+          "Brightness": "95%",
+          "Whiteness": "95% Min",
+          "Hardness": "7 Mohs",
+          "Moisture": "< 0.1%",
+          "Specific Gravity": "2.65",
+          "Melting Point": "1700°C"
+        }
       },
-      particleSizes: ["100 Mesh to 500 Mesh", "Micronized grades"],
+      particleSizes: ["100 Mesh", "200 Mesh", "300 Mesh", "500 Mesh", "Micronized"],
       packaging: ["50 Kg Bags", "1.25 MT Jumbo Bags"],
       applications: ["Glass", "Ceramics", "Foundry", "Electronics", "Construction Chemicals"]
     }
@@ -96,6 +122,7 @@ const SEED_DATA = [
     description: "Premium quality Quartz Grits available in multiple grades and sizes. Ideal for engineered stone and construction.",
     specifications: {
       purity: "High Purity Silica",
+      howWeSource: "Crushed and screened from high-purity quartz crystals to maintain strict size distribution and purity.",
       characteristics: ["Uniform Size", "Low Dust", "High Strength"],
       features: [
         "Consistent particle size",
@@ -104,10 +131,17 @@ const SEED_DATA = [
         "Excellent structural strength"
       ],
       properties: {
-        "SiO₂ Content": "99.0% Min",
-        "Fe₂O₃": "< 0.05%",
-        "Hardness": "7 Mohs",
-        "Color": "Snow White / Transparent"
+        chemical: {
+          "SiO₂": "99.8%",
+          "Fe₂O₃": "0.015%",
+          "Al₂O₃": "0.05%"
+        },
+        physical: {
+          "Hardness": "7 Mohs",
+          "Color": "Snow White / Transparent",
+          "Size Distribution": "Uniform",
+          "Moisture": "Nil"
+        }
       },
       particleSizes: ["0.1-0.4mm", "0.3-0.7mm", "0.6-1.2mm", "1.2-2.5mm", "2.5-4.0mm"],
       packaging: ["50 Kg Bags", "Jumbo Bags"],
@@ -121,6 +155,7 @@ const SEED_DATA = [
     description: "Hydrated Magnesium Silicate known for its extreme softness, hydrophobicity, and lubricating properties.",
     specifications: {
       chemicalFormula: "Mg₃Si₄O₁₀(OH)₂",
+      howWeSource: "Selectively mined from our soapstone deposits and processed in specialized grinding units to preserve the lamellar structure.",
       characteristics: ["Lamellar Structure", "Softness", "Hydrophobic"],
       features: [
         "Super soft texture",
@@ -129,14 +164,20 @@ const SEED_DATA = [
         "Chemical inertness"
       ],
       properties: {
-        "Brightness": "85% - 98%",
-        "Whiteness": "90% - 96%",
-        "Moisture": "< 0.5%",
-        "Specific Gravity": "2.7 - 2.8",
-        "Hardness": "1 Mohs (Softest Mineral)",
-        "Loss on Ignition": "4% - 6%"
+        chemical: {
+          "MgO": "31%",
+          "SiO₂": "62%",
+          "LOI": "5%"
+        },
+        physical: {
+          "Brightness": "95%",
+          "Whiteness": "94%",
+          "Hardness": "1 Mohs",
+          "Moisture": "< 0.5%",
+          "Specific Gravity": "2.75"
+        }
       },
-      particleSizes: ["300 Mesh to 700 Mesh", "Micronized 10-20 Microns"],
+      particleSizes: ["300 Mesh", "400 Mesh", "500 Mesh", "700 Mesh", "Micronized"],
       packaging: ["25 Kg / 50 Kg Bags"],
       applications: ["Paper", "Paints", "Cosmetics", "Pharmaceuticals", "Plastics"]
     }
@@ -148,6 +189,7 @@ const SEED_DATA = [
     description: "Calcium Carbonate coated with Stearic Acid. Improves dispersibility and compatibility with polymer matrices.",
     specifications: {
       purity: "Stearic Acid Coated",
+      howWeSource: "Manufactured by high-speed surface treatment of ultra-fine calcite powder with high-purity stearic acid in our automatic coating units.",
       characteristics: ["Hydrophobic", "Better Flow", "High Gloss"],
       features: [
         "Reduced oil absorption",
@@ -156,13 +198,18 @@ const SEED_DATA = [
         "High gloss finish in products"
       ],
       properties: {
-        "CaCO₃ Content": "98% Min",
-        "Coating Content": "0.5% - 1.2%",
-        "Whiteness": "96% Min",
-        "Moisture": "< 0.1%",
-        "pH Value": "9 - 10"
+        chemical: {
+          "CaCO₃": "98.5%",
+          "Stearic Acid": "1.0%"
+        },
+        physical: {
+          "Whiteness": "97%",
+          "Oil Absorption": "12-14 ml/100g",
+          "Moisture": "< 0.1%",
+          "pH Value": "9.5"
+        }
       },
-      particleSizes: ["Micronized Top Cut 5-10 Microns"],
+      particleSizes: ["2 Microns", "5 Microns", "10 Microns", "15 Microns"],
       packaging: ["25 Kg Bags"],
       applications: ["PVC Pipes", "Masterbatches", "Rubber Cables", "Plastics"]
     }
@@ -174,6 +221,7 @@ const SEED_DATA = [
     description: "Surface-treated Dolomite Powder for enhanced performance in plastic and rubber applications.",
     specifications: {
       purity: "Stearic Acid Coated",
+      howWeSource: "Produced by surface modification of premium dolomite powder using our proprietary coating technology.",
       characteristics: ["Low Moisture Pickup", "Good Dispersion", "Cost Effective"],
       features: [
         "Improved mechanical properties",
@@ -182,12 +230,17 @@ const SEED_DATA = [
         "Excellent compatibility"
       ],
       properties: {
-        "Dolomite Content": "98% Min",
-        "Coating": "Stearic Acid",
-        "Whiteness": "94% Min",
-        "Bulk Density": "0.8 - 1.0"
+        chemical: {
+          "CaMg(CO₃)₂": "98%",
+          "Coating": "Stearic Acid"
+        },
+        physical: {
+          "Whiteness": "94%",
+          "Bulk Density": "0.9 gm/cc",
+          "Moisture": "< 0.1%"
+        }
       },
-      particleSizes: ["Micronized"],
+      particleSizes: ["Micronized", "Super Fine"],
       packaging: ["50 Kg Bags", "Jumbo Bags"],
       applications: ["Plastic Compounds", "Rubber Industry", "Thermoplastics"]
     }
